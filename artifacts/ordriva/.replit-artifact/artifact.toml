@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Ordriva — Distributed Order & Fulfillment Platform"
+description = "A production-style frontend for high-volume order operations, inventory, warehouses, payments, fulfillment, system events, analytics, and service health. Uses separated mock data and services designed for future REST API replacement."
+version = "1.0.0"
+id = "artifacts/ordriva"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24830
+
+[services.development]
+run = "pnpm --filter @workspace/ordriva run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ordriva", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ordriva/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24830"
+BASE_PATH = "/"

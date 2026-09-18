@@ -1,6 +1,6 @@
-# [Project name]
+# Ordriva — Distributed Order & Fulfillment Platform
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Ordriva is a frontend-first operations control room for high-volume orders, inventory, warehouses, payments, fulfillment, events, analytics, and system health.
 
 ## Run & Operate
 
@@ -22,15 +22,22 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/ordriva/src/App.tsx` — route map for the complete Phase 1 product surface.
+- `artifacts/ordriva/src/components/OrdrivaShell.tsx` — shared responsive shell, navigation, theme, search, page headers, and reusable status/metric primitives.
+- `artifacts/ordriva/src/pages/OrdrivaPages.tsx` — operational pages and interactions.
+- `artifacts/ordriva/src/data/mockData.ts` — typed mock models and fixtures kept separate from presentation for later API replacement.
+- `artifacts/ordriva/src/index.css` — Ordriva theme tokens and global styles.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Phase 1 is intentionally frontend-only; no fake REST layer or production telemetry was added.
+- Mock entities and fixtures are typed and centralized so real REST services can replace them without redesigning the pages.
+- The shared shell owns responsive navigation, global search, theme switching, and cross-page primitives.
+- Operational states are rendered as explicit status pills and simulator results are labeled as local fixtures/not connected.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+The app provides a responsive operational overview, searchable order queue with timeline detail, inventory and product views, warehouse capacity, payments, fulfillment pipeline, engineering events, analytics, service health, flash-sale simulator, users, and settings.
 
 ## User preferences
 
@@ -38,7 +45,8 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The flash-sale simulator is deliberately local/mock and must not be presented as real load-test telemetry until a backend is connected.
+- Keep future API work behind the existing mock data/service boundary rather than embedding fetch logic directly into page markup.
 
 ## Pointers
 

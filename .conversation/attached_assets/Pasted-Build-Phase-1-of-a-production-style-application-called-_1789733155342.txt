@@ -1,0 +1,213 @@
+Build Phase 1 of a production-style application called **Ordriva — Distributed Order & Fulfillment Platform**.
+
+IMPORTANT:
+This is not a basic e-commerce shopping website. Ordriva is an enterprise engineering platform for managing high-volume orders, inventory, warehouses, payments, fulfillment, system events, and operational analytics.
+
+For this phase, focus ONLY on creating a polished frontend and frontend architecture. Do not fake a completed backend. Use clearly separated mock data/services that can later be replaced by real REST APIs.
+
+TECHNOLOGY:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Reusable component architecture
+* Responsive design
+* Chart library suitable for operational dashboards
+
+DESIGN:
+Create a modern enterprise SaaS dashboard.
+The interface should look like a real logistics/order-management product rather than a student project.
+
+Use:
+
+* Professional sidebar navigation
+* Top navigation bar
+* Clean typography
+* Responsive cards
+* Data tables
+* Charts
+* Status badges
+* Modals/drawers
+* Toast notifications
+* Loading states
+* Empty states
+* Error states
+* Pagination
+* Search
+* Filters
+
+SIDEBAR:
+
+1. Overview
+2. Orders
+3. Inventory
+4. Products
+5. Warehouses
+6. Payments
+7. Fulfillment
+8. Events
+9. Analytics
+10. System Health
+11. Users
+12. Settings
+
+DASHBOARD:
+
+Display operational metrics such as:
+
+* Total Orders
+* Orders Today
+* Revenue
+* Pending Orders
+* Failed Payments
+* Low Stock Products
+* Active Warehouses
+* Orders Per Minute
+* Average Processing Time
+* Order Success Rate
+
+Add charts for:
+
+* Orders over time
+* Orders by status
+* Revenue trend
+* Inventory levels
+* Payment success/failure
+* Warehouse distribution
+
+ORDERS PAGE:
+
+Create a professional table containing:
+
+* Order ID
+* Customer
+* Products
+* Total
+* Warehouse
+* Payment status
+* Fulfillment status
+* Order status
+* Created time
+
+Statuses:
+CREATED
+INVENTORY_RESERVED
+PAYMENT_PENDING
+CONFIRMED
+PROCESSING
+SHIPPED
+DELIVERED
+CANCELLED
+FAILED
+
+Allow search/filtering by:
+
+* Order ID
+* Status
+* Warehouse
+* Date
+* Payment status
+
+Clicking an order should open a detailed order view containing a visual order timeline.
+
+INVENTORY:
+
+Display:
+
+* Product
+* SKU
+* Warehouse
+* Available quantity
+* Reserved quantity
+* Reorder level
+* Inventory status
+
+Statuses:
+IN_STOCK
+LOW_STOCK
+OUT_OF_STOCK
+
+WAREHOUSES:
+
+Create warehouse cards and detail pages displaying:
+
+* Location
+* Inventory
+* Active orders
+* Fulfillment capacity
+* Operational status
+
+PAYMENTS:
+
+Display transaction ID, order ID, amount, payment method, status, timestamp and refund status.
+
+FULFILLMENT:
+
+Visualize:
+ORDER CONFIRMED → PICKING → PACKING → SHIPPED → OUT FOR DELIVERY → DELIVERED.
+
+EVENTS:
+
+Create an engineering event viewer displaying event type, Kafka topic placeholder, timestamp, associated order and processing status.
+
+ANALYTICS:
+
+Create operational dashboards for:
+
+* Order throughput
+* Payment failure percentage
+* Inventory reservation success
+* Average fulfillment time
+* Warehouse utilization
+* Top-selling products
+
+SYSTEM HEALTH:
+
+Create service cards for future services:
+
+* API Gateway
+* Order Service
+* Inventory Service
+* Payment Service
+* Fulfillment Service
+* Notification Service
+
+Display statuses such as Healthy, Degraded and Down.
+
+FLASH SALE SIMULATOR UI:
+
+Create a dedicated engineering demo page.
+
+Allow entry of:
+
+* Product
+* Initial inventory
+* Number of simulated purchase requests
+
+Display placeholders for future real load-test results:
+
+* Requests
+* Successful orders
+* Rejected orders
+* Oversold units
+* Average latency
+* Throughput
+* Error rate
+
+Do NOT generate fake production performance numbers. Label demo/mock values appropriately until backend load testing is connected.
+
+ARCHITECTURE:
+
+Create the frontend in a way that every mock service can later be replaced with actual backend API calls without redesigning pages.
+
+Do not implement AI/RAG/chatbot features. This project's purpose is distributed systems and backend engineering.
+
+At the end, verify:
+
+* Every navigation item works
+* No broken pages
+* Responsive layouts work
+* Components are reusable
+* No unnecessary placeholder pages
+* No console errors
+* Existing code is not duplicated unnecessarily
