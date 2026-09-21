@@ -60,8 +60,8 @@ export function OrdrivaShell({ children }: { children: ReactNode }) {
               <Sparkles size={16} /><span className="text-[12px] font-semibold">Flash Sale Simulator</span><span className="ml-auto size-1.5 rounded-full bg-[#ee786c]" />
             </Link>
             <div className="flex items-center gap-2 border-t border-[#30465d] px-2 pt-4">
-              <div className="grid size-8 place-items-center rounded-full bg-[#f0a77a] font-mono text-[11px] font-bold text-[#17283d]">AR</div>
-              <div className="min-w-0"><div className="truncate text-xs font-semibold text-[#f4f6ee]">Alex Rivera</div><div className="font-mono text-[9px] text-[#8798a5]">platform engineer</div></div>
+              <div className="grid size-8 place-items-center rounded-full bg-[#f0a77a] font-mono text-[11px] font-bold text-[#17283d]">TK</div>
+              <div className="min-w-0"><div className="truncate text-xs font-semibold text-[#f4f6ee]">Tejaswi Kunche</div><div className="font-mono text-[9px] text-[#8798a5]">platform engineer</div></div>
               <button type="button" data-testid="button-profile-menu" className="ml-auto text-[#8798a5] hover:text-white"><ChevronDown size={14} /></button>
             </div>
           </div>
@@ -77,7 +77,7 @@ export function OrdrivaShell({ children }: { children: ReactNode }) {
               <div className="hidden items-center gap-2 border-r border-border pr-4 sm:flex"><span className="size-1.5 rounded-full bg-[#58b8a5]" /><span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Production</span></div>
               <button type="button" onClick={() => setDark(!dark)} data-testid="button-theme-toggle" className="rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground">{dark ? <Sun size={16} /> : <Moon size={16} />}</button>
               <button type="button" data-testid="button-notifications" className="relative rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground"><Bell size={17} /><span className="absolute right-1.5 top-1.5 size-1.5 rounded-full bg-[#ee786c]" /></button>
-              <div className="hidden size-8 place-items-center rounded-full bg-[#f0a77a] font-mono text-[10px] font-bold text-[#17283d] sm:grid">AR</div>
+              <div className="hidden size-8 place-items-center rounded-full bg-[#f0a77a] font-mono text-[10px] font-bold text-[#17283d] sm:grid">TK</div>
             </div>
           </header>
           <main className="mx-auto max-w-[1600px] px-4 pb-14 pt-6 sm:px-7 lg:px-9">{children}</main>

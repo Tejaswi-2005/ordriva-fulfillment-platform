@@ -10,23 +10,22 @@ name = "API Server"
 paths = ["/api"]
 
 [services.development]
-run = "pnpm --filter @workspace/api-server run dev"
+run = "JAVA_HOME=$(dirname $(dirname $(readlink -f $(command -v java)))) mvn -f pom.xml spring-boot:run"
 
 [services.production]
 
 [services.production.build]
-args = ["pnpm", "--filter", "@workspace/api-server", "run", "build"]
+args = ["bash", "-lc", "JAVA_HOME=$(dirname $(dirname $(readlink -f $(command -v java)))) mvn -f artifacts/api-server/pom.xml package -DskipTests"]
 
 [services.production.build.env]
-NODE_ENV = "production"
+SPRING_PROFILES_ACTIVE = "production"
 
 [services.production.run]
-# we don't run through pnpm to make startup faster in production
-args = ["node", "--enable-source-maps", "artifacts/api-server/dist/index.mjs"]
+args = ["java", "-jar", "artifacts/api-server/target/ordriva-api-0.1.0.jar"]
 
 [services.production.run.env]
 PORT = "8080"
-NODE_ENV = "production"
+SPRING_PROFILES_ACTIVE = "production"
 
 [services.production.health.startup]
 path = "/api/healthz"

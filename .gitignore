@@ -5,6 +5,7 @@ dist
 tmp
 out-tsc
 *.tsbuildinfo
+**/target/
 .expo
 .expo-shared
 
@@ -47,3 +48,10 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+# Replit conversation files
+.conversation/
+attached_assets/
